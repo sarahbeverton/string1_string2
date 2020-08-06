@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Sarah Beverton"
+__author__ = "Sarah Beverton - I had already pushed to the master before the demo explaining checking out a branch, so hopefully this will still work"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
