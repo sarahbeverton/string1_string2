@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Sarah Beverton"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -23,8 +23,13 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    if len(s) >= 3:
+        if s[-3:] == "ing":
+            return s + "ly"
+        else:
+            return s + "ing"
+    else:
+        return s
 
 
 # E. not_bad
@@ -37,9 +42,12 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
-
+    index_not = s.find("not")
+    index_bad = s.find("bad")
+    if index_bad > index_not:
+        return s.replace(s[index_not:index_bad+3], "good")
+    else:
+        return s
 
 # F. front_back
 # Consider dividing a string into two halves.
@@ -52,8 +60,26 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    if len(a) % 2 == 0:
+        a_front = a[:len(a)//2]
+        a_back = a[-(len(a)//2):]
+        if len(b) % 2 == 0:
+            b_front = b[:len(b)//2]
+            b_back = b[-(len(b)//2):]
+        else:
+            b_front = b[:(len(b)//2)+1]
+            b_back = b[-(len(b)//2):]
+        return a_front + b_front + a_back + b_back
+    else:
+        a_front = a[:(len(a)//2)+1]
+        a_back = a[-(len(a)//2):]
+        if len(b) % 2 == 0:
+            b_front = b[:len(b)//2]
+            b_back = b[-(len(b)//2):]
+        else:
+            b_front = b[:(len(b)//2)+1]
+            b_back = b[-(len(b)//2):]
+        return a_front + b_front + a_back + b_back
 
 
 # Provided simple test() function used in main() to print
